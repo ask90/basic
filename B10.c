@@ -2,20 +2,20 @@
 
 int main(void)
 {
-	int number, lastDigit = 0, preDigit = 0, identical =  0;
+	int number, lastDigit = 0, preDigit = 0;
 	scanf("%d", &number);
 	while (number)
 	{
 		lastDigit = number % 10;
 		preDigit = number % 100 / 10; 
 		number /= 10;
-		if (preDigit == lastDigit)
+		if (lastDigit <= preDigit)
 		{
-			identical++;
+			printf("NO\n");
+			goto skip;
 		}
 	}
-	printf(identical ? "YES\n" : "NO\n");
+	printf("YES\n");
+skip:
     return 0;
 }
-
-
