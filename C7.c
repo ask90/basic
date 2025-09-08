@@ -1,20 +1,15 @@
 #include <stdio.h>
 
 // с6 для старта
-unsigned long chessCorn(unsigned int lastNum)
+int  absolut(int num)
 {
-	unsigned long mul = 1;
-	for (int i = 1; i < lastNum; i++)
-	{
-		mul *= 2;
-	}
-	return mul;
+	return -num;
 }
 
 int main ()
 {
 	unsigned int num;
 	scanf("%d", &num);
-	printf("%lu\n", chessCorn(num));
+	printf("%d\n", absolut(num));
 	return 0;
 }
